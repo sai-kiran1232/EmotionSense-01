@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmotionSense</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('about img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>EmotionSense Information</h1>
+    <p>Welcome to our EmotionSense information page. Below, you'll find useful information about Emotion detection.</p>
+    <div id="types">
+      <h2>Key Features</h2>
+      <ul id="typesList">
+        
+      </ul>
+    </div>
+    <div id="process">
+      <h2>Process of EmotionSense</h2>
+      <p id="processDescription"> </p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      const typesList = document.getElementById("typesList");
+      const types = ["- Real-time emotion detection from live video streams or static images.", "- Multi-modal analysis incorporating facial expressions, gestures, and voice intonations.", "- Cross-platform compatibility for seamless integration into diverse applications.", "- Customizable APIs and SDKs for easy implementation and scalability."];
+      
+      types.forEach(type => {
+        const listItem = document.createElement("li");
+        listItem.textContent = type;
+        typesList.appendChild(listItem);
+      });
+
+      
+      const processDescription = document.getElementById("processDescription");
+      const processText = "EmotionSense is an innovative project leveraging advanced facial recognition technology to detect and interpret human emotions accurately. By analyzing facial expressions in real-time, EmotionSense provides invaluable insights into the emotional states of individuals, revolutionizing various fields such as psychology, marketing, human-computer interaction, and beyond. Powered by cutting-edge machine learning algorithms, EmotionSense can identify a wide range of emotions including joy, sadness, anger, surprise, disgust, and fear with remarkable precision. Through continuous learning and adaptation, the system refines its accuracy over time, ensuring reliable and consistent results across diverse demographics and cultural backgrounds.";
+
+      processDescription.textContent = processText;
+    });
+  </script>
+</body>
+</html>
